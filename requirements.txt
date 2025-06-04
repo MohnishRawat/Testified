@@ -1,4 +1,4 @@
-﻿asgiref==3.7.2
+asgiref==3.7.2
 blinker==1.8.2
 certifi==2023.7.22
 charset-normalizer==3.2.0
@@ -8,17 +8,19 @@ comtypes==1.2.0
 Django==4.2.6
 Flask==3.0.3
 gTTS==2.3.2
+gunicorn==23.0.0
 idna==3.4
 itsdangerous==2.2.0
 Jinja2==3.1.4
 MarkupSafe==3.0.1
+packaging==25.0
 pillow==11.2.1
+psycopg2-binary==2.9.10
 pygame==2.5.2
-pypiwin32==223
-pyttsx3==2.90
 requests==2.31.0
 sqlparse==0.4.4
 tzdata==2023.3
 urllib3==2.0.5
 Werkzeug==3.0.4
+whitenoise==6.9.0
 dj-database-url
