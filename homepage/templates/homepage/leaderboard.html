@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5 text-center">
+    <h3>🏆 Leaderboard – {{ section.title }}</h3>
+
+    {% if top_results %}
+    <table class="table table-bordered mt-4">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Best Score (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in top_results %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ result.user__username }}</td>
+                <td>{{ result.best_score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-muted">No attempts yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

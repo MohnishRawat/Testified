@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Available Exams</h2>
+    <div class="row">
+        {% for exam in exams %}
+        <div class="col-md-4 mb-3">
+            <div class="card p-3">
+                <h5>{{ exam.name }}</h5>
+                <p>{{ exam.description|truncatewords:15 }}</p>
+                <a href="{% url 'homepage:sections' exam.id %}" class="btn btn-primary">View Sections</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

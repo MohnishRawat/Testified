@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Sections in {{ exam.name }}</h2>
+    <ul class="list-group">
+        {% for section in sections %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ section.title }}
+            <a href="{% url 'homepage:start_test' section.id %}" class="btn btn-sm btn-outline-primary">
+                Start Test
+            </a>
+            <a href="{% url 'homepage:leaderboard' section.id %}"
+                class="btn btn-sm btn-outline-warning ms-2">Leaderboard</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

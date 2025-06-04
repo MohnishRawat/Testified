@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5 text-center">
+    <h3>Test Completed!</h3>
+    <p><strong>Total Questions:</strong> {{ result.total_questions }}</p>
+    <p><strong>Attempted:</strong> {{ result.attempted }}</p>
+    <p><strong>Correct:</strong> {{ result.correct }}</p>
+    <p><strong>Wrong:</strong> {{ result.wrong }}</p>
+    <p><strong>Score:</strong> {{ result.score }}%</p>
+    <a href="{% url 'homepage:exams' %}" class="btn btn-primary mt-3">Back to Exams</a>
+</div>
+{% endblock %}
